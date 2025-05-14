@@ -1,0 +1,21 @@
+{
+  "name": "my-rule-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "update": "surgio generate && surgio upload",
+    "start": "node server.js",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "clean-dist": "rm -rf dist",
+    "mkdir-dist": "mkdir -p dist/rule/qx dist/rule/sg",
+    "generate": "npm run clean-dist && npm run mkdir-dist && npx surgio generate"
+  },
+  "engine": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@surgio/gateway": "2.2.0",
+    "surgio": "3.10.7"
+  }
+}

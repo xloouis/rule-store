@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "*.tpl": "nunjucks"
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "dconf",
+    "Quantumult",
+    "surgio"
+  ]
+}
