@@ -1,0 +1,57 @@
+name: Generate and Deploy Dist
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read .nvmrc
+        id: nvmrc
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.nvmrc.outputs.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install surgio
+        run: |
+          npm install surgio@latest
+          npm install @surgio/gateway@latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate dist folder
+        run: npm run generate
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push dist folder
+        run: |
+          # Check if there are changes to commit
+          if [[ -z $(git status --porcelain) ]]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          # Add dist folder to git
+          git add dist -f
+
+          # Commit changes
+          git commit -m "Update dist folder [skip ci]"
+
+          # Push changes
+          git push origin main
