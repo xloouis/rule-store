@@ -24,8 +24,14 @@ module.exports = {
      * Surge
      */
     {
-      name: 'rule-set.dconf',
-      template: 'sg-rule-set',
+      name: 'proxy.dconf',
+      template: 'sg-rule-proxy',
+      provider: 'demo',
+      destDir: path.join(__dirname, './dist/rule/sg'),
+    },
+    {
+      name: 'jetbrains.dconf',
+      template: 'sg-rule-jetbrains',
       provider: 'demo',
       destDir: path.join(__dirname, './dist/rule/sg'),
     },
@@ -47,6 +53,12 @@ module.exports = {
     {
       name: 'proxy.snippet',
       template: 'qx-filter-proxy',
+      provider: 'demo',
+      destDir: path.join(__dirname, './dist/rule/qx'),
+    },
+    {
+      name: 'jetbrains.snippet',
+      template: 'qx-filter-jetbrains',
       provider: 'demo',
       destDir: path.join(__dirname, './dist/rule/qx'),
     },

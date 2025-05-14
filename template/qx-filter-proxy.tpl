@@ -1,3 +1,6 @@
 {% filter quantumultx %}
-{{ snippet("snippet/proxy-rules.tpl").main('proxy') }}
+## dev-tools
+{{ snippet("snippet/dev-tools.tpl").main('proxy') }}
+## common
+{{ snippet("snippet/common-proxy.tpl").main('proxy') }}
 {% endfilter %}
