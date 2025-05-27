@@ -1,0 +1,4 @@
+# DOMAIN-SUFFIX,trae.com.cn,DIRECT
+DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,bytegate-sg.byteintlapi.com
+DOMAIN-SUFFIX,trae-api-sg.mchost.guru
