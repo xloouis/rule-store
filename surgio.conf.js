@@ -30,12 +30,6 @@ module.exports = {
       destDir: path.join(__dirname, './dist/rule/sg'),
     },
     {
-      name: 'jetbrains.dconf',
-      template: 'sg-rule-jetbrains',
-      provider: 'demo',
-      destDir: path.join(__dirname, './dist/rule/sg'),
-    },
-    {
       name: 'emby-proxy.dconf',
       template: 'sg-rule-emby-proxy',
       provider: 'demo',
@@ -44,6 +38,12 @@ module.exports = {
     {
       name: 'emby-direct.dconf',
       template: 'sg-rule-emby-direct',
+      provider: 'demo',
+      destDir: path.join(__dirname, './dist/rule/sg'),
+    },
+    {
+      name: 'trae.dconf',
+      template: 'sg-rule-trae',
       provider: 'demo',
       destDir: path.join(__dirname, './dist/rule/sg'),
     },
@@ -57,12 +57,6 @@ module.exports = {
       destDir: path.join(__dirname, './dist/rule/qx'),
     },
     {
-      name: 'jetbrains.snippet',
-      template: 'qx-filter-jetbrains',
-      provider: 'demo',
-      destDir: path.join(__dirname, './dist/rule/qx'),
-    },
-    {
       name: 'emby-proxy.snippet',
       template: 'qx-filter-emby-proxy',
       provider: 'demo',
@@ -71,6 +65,12 @@ module.exports = {
     {
       name: 'emby-direct.snippet',
       template: 'qx-filter-emby-direct',
+      provider: 'demo',
+      destDir: path.join(__dirname, './dist/rule/qx'),
+    },
+    {
+      name: 'trae.snippet',
+      template: 'qx-filter-trae',
       provider: 'demo',
       destDir: path.join(__dirname, './dist/rule/qx'),
     }
