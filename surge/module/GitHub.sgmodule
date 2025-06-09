@@ -1,6 +1,6 @@
 #!name = Change GitHub's region
 #!desc = 解决github速率限制返回429问题
-#!category = Optimizations
+#!category = xloouis
 
 [Header Rewrite]
 http-request ^https:\/\/github\.com\/ header-replace Accept-Language en-us
