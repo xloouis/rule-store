@@ -4,3 +4,4 @@ DOMAIN-SUFFIX,313445.xyz
 DOMAIN-SUFFIX,nijigem.by
 DOMAIN-SUFFIX,zox.show
 DOMAIN-SUFFIX,niceduck.lol
+DOMAIN-SUFFIX,emby.69yun69.com
