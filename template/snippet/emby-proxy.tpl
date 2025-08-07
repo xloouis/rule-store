@@ -7,3 +7,5 @@ DOMAIN-SUFFIX,niceduck.lol
 DOMAIN-SUFFIX,69yun69.com
 DOMAIN-SUFFIX,ciallo.party
 DOMAIN-SUFFIX,aliz.work
+
+DOMAIN-SUFFIX,uhdnow.com
